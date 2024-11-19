@@ -1,0 +1,21 @@
+//Name Khushnuma Shaikh shakeeluddin
+//Uin 241A001
+//Roll no 01
+#include<stdio.h>
+int factorialrecursive(int num){
+if (num<=1){
+
+        return 1;
+}
+return num * factorialrecursive(num-1);
+}
+int main(){
+   int num;
+
+   printf("\t\t\t***RECURSIVE FACTORIAL FUNCTION***\n\n");
+   printf("Enter Number:");
+   scanf("%d",&num);
+   printf("FACTORIAL of %d is %d",num, factorialrecursive(num));
+
+   return 0;
+}
