@@ -1,0 +1,133 @@
+//Name: Shaikh khushnuma 
+
+//Div:A
+
+//Class:F.E
+
+//UIN:241A001
+
+//Roll no:1
+
+#include<stdio.h>
+
+struct employee {
+
+int id;
+
+char name [50];
+
+float salary;
+
+};
+
+void add_employee() {
+
+struct employee emp;
+
+FILE *file = fopen ("employee_database.txt", "a");
+
+if (file == NULL) {
+
+printf("Error opening file!\n");
+
+return;
+
+}
+
+printf ("Enter Employee ID: ");
+
+scanf("&d", &emp.id);
+
+printf("Enter Employee Name: ");
+
+getchar();
+
+gets(emp.name)
+
+printf("Enter Employee Salary: ");
+
+scanf("&f", &emp.salary);
+
+fprintf(file, "&d %.2f %s\n", emp.id, emp.salary, emp.name);
+fclose (file);
+
+printf("Employee record added successfully!\n");
+
+void display_employees() {
+
+struct employee emp;
+
+FILE "file=fopen("employee_datakase.txt",
+
+"r");
+
+if (file == NULL) {
+
+printf("No employee records found!\n");
+
+return;
+
+}
+
+printf("\nEmployee Records:\n");
+
+printf("ID\tName\t\tSalary\n");
+
+printf("-------------------------------------\n");
+
+while (fscanf(file, "%d %f %[^\n]", &emp.id, &emp.salary, emp.name) != EOF) {
+
+printf("%d \t\t -15s%.2f\n", emp.id, emp.name, emp.salary);
+
+}
+
+fclose (file);
+
+}
+
+int main() {
+
+int choice;
+
+printf("\t\t *** Employee Database *** \n\n");
+
+while (1) {
+
+printf("\nEmployee Database Menu:\n");
+
+printf("1.Add Employee Record\n");
+
+printf("2. Display Employee Records\n");
+printf("3. Exit\n");
+printf("Enter your choice Employee”);
+
+scanf("&d", &choice);
+
+switch (choice) {
+
+саsе 1:
+
+add_employee();
+
+break;
+
+саsе 2:
+
+display_employees();
+
+break;
+
+case3:
+
+printf("Exiting the program.In");
+
+return 0;
+
+default:
+
+printf("Invalid choice! Please try again.\n");
+}
+
+}
+
+return 0;
