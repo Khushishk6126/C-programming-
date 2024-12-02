@@ -1,0 +1,58 @@
+/*GROUP 19
+C TITANS
+***VOTING MANAGEMENT SYSTEM***
+
+Name:Shaikh Khushnuma
+Div: A
+UIN:241A001
+Class:F.E (AIDS)
+Roll no:01
+*/
+#include <stdio.h>
+int main() {
+printf(“1 is for KITE 🪁\n”);
+printf(‘2 is for SHIP \n”);
+printf(“3 is for FLOWER \n”);
+  int candidate1_votes = 0;
+  int candidate2_votes = 0;
+  int candidate3_votes = 0;
+  int num_voters = 0;
+  int vote;
+
+  printf("Enter the number of voters: ");
+  scanf("%d", &num_voters);
+
+  for (int i = 0; i < num_voters; i++) {
+    printf("Voter %d, enter your vote (1, 2, or 3): ", i + 1);
+    scanf("%d", &vote);
+switch (vote) {
+      case 1:
+        candidate1_votes++;
+        break;
+      case 2:
+        candidate2_votes++;
+        break;
+      case 3:
+        candidate3_votes++;
+        break;
+      default:
+        printf("Invalid vote.\n");
+    }
+  }
+  printf("\nResults:\n");
+  printf("Candidate 1: %d votes\n", candidate1_votes);
+  printf("Candidate 2: %d votes\n", candidate2_votes);
+  printf("Candidate 3: %d votes\n", candidate3_votes);
+
+if(candidate1_votes > candidate2_votes)
+{ if(candidate1_votes >candidate3_votes)
+{ printf("WINNER IS CANDIDATE 1 with :%d votes",candidate1_votes); }
+else 
+{ printf("WINNER IS CANDIDATE 3 with :%d votes",candidate3_votes); } }
+else
+{ if(candidate2_votes > candidate3_votes)
+{ printf("WINNER IS CANDIDATE 2 with :%d votes",candidate2_votes);}
+else
+{ printf("WINNER IS CANDIDATE 3 with :%d votes", candidate3_votes);} }  
+  return 0;
+}
